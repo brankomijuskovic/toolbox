@@ -1,0 +1,31 @@
+[user]
+        name = root
+        email = devops@localhost.com
+[core]
+        autocrlf = input
+        safecrlf = true
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  lg = log --color --graph --date=short --pretty=format:'%Cred%h%Creset | %ad | %C(yellow)%s%Creset | %Cgreen%an%Creset' --abbrev-commit
+
+[color]
+  pager = true
+  ui = true
+  diff = auto
+  status = auto
+  branch = auto
+
+[color "branch"]
+  local = yellow
+  remote = green
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
