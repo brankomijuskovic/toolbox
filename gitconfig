@@ -1,5 +1,5 @@
 [user]
-        name = root
+        name = devops
         email = devops@localhost.com
 [core]
         autocrlf = input
