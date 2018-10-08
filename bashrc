@@ -13,3 +13,5 @@ alias go='git checkout '
 alias gl='git lg '
 alias gls='git lg --stat '
 alias rm='rm -i'
+
+source <(kubectl completion bash)
