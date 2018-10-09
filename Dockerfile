@@ -9,7 +9,8 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl \
     -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl ; \
     mv ./kubectl /usr/local/bin/kubectl ; chmod +x /usr/local/bin/kubectl
 RUN curl -LO https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip ; \
-    unzip terraform_${terraform_version}_linux_amd64.zip ; mv ./terraform /usr/local/bin/ ; chmod +x /usr/local/bin/terraform 
+    unzip terraform_${terraform_version}_linux_amd64.zip ; mv ./terraform /usr/local/bin/ ; \
+    chmod +x /usr/local/bin/terraform ; rm -f terraform_${terraform_version}_linux_amd64.zip
 RUN yum clean all
 RUN rm -rf /var/cache/yum
 WORKDIR /
