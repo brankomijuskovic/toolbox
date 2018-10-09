@@ -1,8 +1,8 @@
-FROM amazonlinux
+FROM centos7
 WORKDIR /root
 COPY bashrc .bashrc
 COPY gitconfig .gitconfig
-RUN yum install -y bash-completion git python2-pip epel less vim
+RUN yum install -y  epel-release ; yum install -y less vim bash-completion git python2-pip
 RUN pip install --no-cache-dir --upgrade awscli ansible
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl \
     -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl ; \
