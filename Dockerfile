@@ -1,4 +1,4 @@
-FROM centos7
+FROM centos:7
 WORKDIR /root
 COPY bashrc .bashrc
 COPY gitconfig .gitconfig
