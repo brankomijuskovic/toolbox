@@ -15,3 +15,4 @@ alias gls='git lg --stat '
 alias rm='rm -i'
 
 source <(kubectl completion bash)
+source /etc/bashrc
