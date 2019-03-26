@@ -1,5 +1,5 @@
 FROM centos:7
-ENV terraform_version 0.11.8
+ENV terraform_version 0.11.13
 WORKDIR /root
 COPY bashrc .bashrc
 COPY gitconfig .gitconfig
